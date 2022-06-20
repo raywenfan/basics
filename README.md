@@ -1,2 +1,2 @@
-# For Beginner me
+# For beginner me
 Summaries of some basic information 
