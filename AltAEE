@@ -1,0 +1,9 @@
+def createdf(dataframe,col_to_split,delimiter):
+    stringmethod = dataframe[col_to_split].str.split(delimiter).str
+    i=0
+    while (stringmethod[i].isnull()).sum() != dataframe.shape[0]:
+        i+=1
+    df = pd.DataFrame(columns=range(i))
+    for j in range(df.shape[1]):
+        df.iloc[:,j] = stringmethod[j]
+    return df
